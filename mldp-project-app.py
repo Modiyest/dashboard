@@ -30,8 +30,8 @@ def user_input_features():
     areas = list(areas_avg_price.keys()) 
     st.sidebar.subheader("Property Details")
     size = st.sidebar.slider('Size', 52.0, 1500000.0, 52.0)
-    bedroom = st.sidebar.slider('Bedrooms', 1.0, 10.0, 1.0, step=1.0)
-    bathroom = st.sidebar.slider('Bathrooms', 1.0, 144.0, 1.0, step=1.0)
+    bedroom = st.sidebar.slider('Bedrooms', 1, 10, 1, step=1)
+    bathroom = st.sidebar.slider('Bathrooms', 1, 144, 1.0, step=1)
     st.sidebar.subheader("Area & Property Type")
     selected_area = st.sidebar.selectbox('Select an Area:', areas)
     area_ohe = {f"Area_{area}": (1 if area == selected_area else 0) for area in areas}
